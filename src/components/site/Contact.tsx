@@ -22,15 +22,15 @@ const details = [
     value: "pragisosofts@gmail.com",
     href: "mailto:pragisosofts@gmail.com",
   },
-  { icon: Phone, label: "Phone", value: "+91 00000 00000", href: "tel:+910000000000" },
+  { icon: Phone, label: "Phone", value: "+91 90809 61649", href: "tel:+919080961649" },
   { icon: MapPin, label: "Location", value: "India", href: undefined },
 ];
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn" },
-  { icon: Instagram, label: "Instagram" },
-  { icon: Facebook, label: "Facebook" },
-  { icon: Youtube, label: "YouTube" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/pragiso-soft-technologies/?viewAsMember=true" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/pragisotech/" },
+  { icon: Facebook, label: "Facebook", href: "#contact" },
+  { icon: Youtube, label: "YouTube", href: "#contact" },
 ];
 
 export function Contact() {
@@ -141,7 +141,7 @@ export function Contact() {
                     id="phone"
                     name="phone"
                     type="tel"
-                    placeholder="+91 00000 00000"
+                    placeholder="+91 90809 61649"
                     className="3xl:py-3 3xl:text-base"
                   />
                 </div>
@@ -240,7 +240,9 @@ export function Contact() {
                   {socials.map((s) => (
                     <a
                       key={s.label}
-                      href="#contact"
+                      href={s.href}
+                      target={s.href !== "#contact" ? "_blank" : undefined}
+                      rel={s.href !== "#contact" ? "noopener noreferrer" : undefined}
                       aria-label={s.label}
                       className="grid size-10 3xl:size-12 place-items-center rounded-xl border border-border bg-secondary/40 text-muted-foreground transition-all duration-500 hover:-translate-y-1.5 hover:text-accent hover:border-accent/40 hover:bg-accent/10 hover:shadow-[0_0_20px_-5px_var(--accent)] hover:scale-110"
                     >

@@ -13,10 +13,10 @@ const quickLinks = [
 const services = ["Web Development", "App Development", "Digital Marketing", "UI/UX Design"];
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn" },
-  { icon: Instagram, label: "Instagram" },
-  { icon: Facebook, label: "Facebook" },
-  { icon: Youtube, label: "YouTube" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/pragiso-soft-technologies/?viewAsMember=true" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/pragisotech/" },
+  { icon: Facebook, label: "Facebook", href: "#contact" },
+  { icon: Youtube, label: "YouTube", href: "#contact" },
 ];
 
 const logoSrc = typeof logo === "string" ? logo : logo?.url || "/favicon.png";
@@ -54,15 +54,16 @@ export function Footer() {
             </p>
             <div className="mt-6 flex gap-2">
               {socials.map((s) => (
-                <Link
+                <a
                   key={s.label}
-                  to="/"
-                  hash="contact"
+                  href={s.href}
+                  target={s.href !== "#contact" ? "_blank" : undefined}
+                  rel={s.href !== "#contact" ? "noopener noreferrer" : undefined}
                   aria-label={s.label}
                   className="grid size-9 3xl:size-11 place-items-center rounded-lg border border-border bg-secondary/30 text-muted-foreground transition-all duration-500 hover:-translate-y-1.5 hover:text-accent hover:border-accent/40 hover:bg-accent/10 hover:shadow-[0_0_20px_-5px_var(--accent)] hover:scale-110"
                 >
                   <s.icon className="size-4 3xl:size-5" aria-hidden />
-                </Link>
+                </a>
               ))}
             </div>
           </div>
