@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
   <url>
-    <loc>https://www.yourdomain.com/</loc>
-    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <loc>https://www.pragisotech.in/</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.pragisotech.in/pragiso-services-hero.png</image:loc>
+      <image:title>Pragiso Soft Technologies - Digital Agency</image:title>
+    </image:image>
   </url>
+
+  <!-- Case Studies Hub -->
   <url>
-    <loc>https://www.yourdomain.com/case-studies</loc>
-    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <loc>https://www.pragisotech.in/case-studies</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Case Studies Individual Pages -->
+  <url>
+    <loc>https://www.pragisotech.in/case-studies/ecommerce-platform</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Add your dynamic case study URLs here -->
+  <url>
+    <loc>https://www.pragisotech.in/case-studies/business-management-app</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pragisotech.in/case-studies/corporate-website</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pragisotech.in/case-studies/digital-growth-campaign</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pragisotech.in/case-studies/fintech-dashboard</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

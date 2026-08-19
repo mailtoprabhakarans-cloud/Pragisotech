@@ -60,18 +60,20 @@ export function About() {
           <div>
             <SectionHeading
               eyebrow="About Us"
-              title="Turning Ideas Into Digital Reality"
+              title="Coimbatore's Trusted Partner for Digital Transformation"
               align="left"
             />
             <Reveal delay={80}>
               <p className="mt-6 text-base sm:text-lg 2xl:text-xl 3xl:text-2xl leading-relaxed text-muted-foreground">
-                Pragiso Soft Technologies helps businesses and startups transform ideas into modern
-                digital products. From the first strategy conversation to launch and beyond, we
-                combine engineering discipline with design craft to build platforms that perform.
+                Pragiso Soft Technologies is a top-rated IT company based in Coimbatore, Tamil Nadu,
+                helping businesses and startups transform ideas into modern digital products. From the
+                first strategy conversation to launch and beyond, we combine engineering discipline
+                with design craft to build platforms that perform and scale.
               </p>
               <p className="mt-4 text-base sm:text-lg 2xl:text-xl 3xl:text-2xl leading-relaxed text-muted-foreground">
-                We work as an extension of your team — clear communication, measurable outcomes and
-                technology choices that stay relevant as your business scales.
+                As one of the best software development companies in Coimbatore, we work as an extension
+                of your team — clear communication, measurable outcomes, dedicated support and
+                technology choices that stay relevant as your business grows across India and beyond.
               </p>
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[

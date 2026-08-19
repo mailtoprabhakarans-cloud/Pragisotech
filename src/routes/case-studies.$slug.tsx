@@ -24,6 +24,9 @@ export const Route = createFileRoute("/case-studies/$slug")({
     const { study } = loaderData;
     const title = `${study.name} Case Study | Pragiso Soft Technologies`;
     const description = `${study.desc} See the challenge, our approach and the measured results for this ${study.category.toLowerCase()} project.`;
+    const canonicalUrl = `https://www.pragisotech.in/case-studies/${study.slug}`;
+    const ogImage = `https://www.pragisotech.in/pragiso-services-hero.png`;
+
     return {
       meta: [
         { title },
@@ -31,7 +34,95 @@ export const Route = createFileRoute("/case-studies/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:type", content: "article" },
+        { property: "og:url", content: canonicalUrl },
+        { property: "og:image", content: ogImage },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:image:alt", content: `${study.name} Case Study` },
+        { property: "article:section", content: study.category },
+        { property: "article:author", content: "Pragiso Soft Technologies" },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+        { name: "twitter:image", content: ogImage },
+      ],
+      links: [{ rel: "canonical", href: canonicalUrl }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://www.pragisotech.in/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Case Studies",
+                    item: "https://www.pragisotech.in/case-studies",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: study.name,
+                    item: canonicalUrl,
+                  },
+                ],
+              },
+              {
+                "@type": "TechArticle",
+                "@id": `${canonicalUrl}#article`,
+                headline: title,
+                description: description,
+                image: ogImage,
+                url: canonicalUrl,
+                inLanguage: "en-US",
+                author: {
+                  "@type": "Organization",
+                  name: "Pragiso Soft Technologies",
+                  url: "https://www.pragisotech.in",
+                },
+                publisher: {
+                  "@type": "Organization",
+                  name: "Pragiso Soft Technologies",
+                  logo: {
+                    "@type": "ImageObject",
+                    url: "https://www.pragisotech.in/pragiso-logo.png",
+                  },
+                },
+                about: {
+                  "@type": "Thing",
+                  name: study.category,
+                },
+                ...(study.testimonial
+                  ? {
+                      review: {
+                        "@type": "Review",
+                        reviewBody: study.testimonial.quote,
+                        author: {
+                          "@type": "Person",
+                          name: study.testimonial.author,
+                          jobTitle: study.testimonial.role,
+                        },
+                        reviewRating: {
+                          "@type": "Rating",
+                          ratingValue: "5",
+                          bestRating: "5",
+                        },
+                      },
+                    }
+                  : {}),
+              },
+            ],
+          }),
+        },
       ],
     };
   },

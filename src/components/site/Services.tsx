@@ -7,7 +7,7 @@ const services = [
     no: "01",
     icon: Code2,
     title: "Web Development",
-    desc: "Build fast, scalable and conversion-focused websites and web applications.",
+    desc: "Best web development company in Coimbatore — we build fast, scalable and conversion-focused websites and web applications.",
     items: [
       "Business Websites",
       "Corporate Websites",
@@ -20,7 +20,7 @@ const services = [
     no: "02",
     icon: Smartphone,
     title: "App Development",
-    desc: "Create beautiful and reliable mobile experiences for modern businesses.",
+    desc: "Top mobile app development in Coimbatore — beautiful and reliable mobile experiences for modern businesses.",
     items: [
       "Android Apps",
       "iOS Apps",
@@ -33,14 +33,14 @@ const services = [
     no: "03",
     icon: TrendingUp,
     title: "Digital Marketing",
-    desc: "Help businesses increase visibility, traffic, leads and conversions.",
+    desc: "Best digital marketing agency in Coimbatore — increase visibility, traffic, leads and conversions.",
     items: ["SEO", "Social Media Marketing", "Google Ads", "Content Marketing", "Lead Generation"],
   },
   {
     no: "04",
     icon: PenTool,
     title: "UI/UX Design",
-    desc: "Create intuitive and visually stunning digital experiences.",
+    desc: "Best UI/UX design company in Coimbatore — intuitive and visually stunning digital experiences.",
     items: ["Website UI/UX", "Mobile App Design", "Branding", "Prototyping", "Design Systems"],
   },
 ];
@@ -112,8 +112,8 @@ export function Services() {
       <div className="mx-auto fluid-container">
         <SectionHeading
           eyebrow="Services"
-          title="Our Expertise"
-          subtitle="Technology solutions designed to help your business innovate, compete and grow."
+          title="Our Expertise — Best IT Services in Coimbatore"
+          subtitle="Technology solutions designed to help your business innovate, compete and grow. Trusted by startups and enterprises across Tamil Nadu."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4 3xl:gap-8">

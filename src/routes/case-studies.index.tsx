@@ -5,9 +5,9 @@ import { Footer } from "@/components/site/Footer";
 import { Reveal, SectionHeading } from "@/components/site/Reveal";
 import { caseStudies } from "@/data/case-studies";
 
-const title = "Case Studies | Pragiso Soft Technologies";
+const title = "Case Studies & Client Success Stories | Pragiso Soft Technologies";
 const description =
-  "Detailed case studies from Pragiso Soft Technologies covering web platforms, mobile apps, UI/UX design and digital marketing — with the challenge, approach and measured results.";
+  "Explore detailed case studies from Pragiso Soft Technologies covering web platforms, mobile apps, UI/UX design and digital marketing with real challenges, approaches, and measurable outcomes.";
 
 export const Route = createFileRoute("/case-studies/")({
   component: CaseStudiesIndex,
@@ -18,7 +18,60 @@ export const Route = createFileRoute("/case-studies/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.pragisotech.in/case-studies" },
+      { property: "og:image", content: "https://www.pragisotech.in/pragiso-services-hero.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Pragiso Soft Technologies Case Studies" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: "https://www.pragisotech.in/pragiso-services-hero.png" },
+    ],
+    links: [{ rel: "canonical", href: "https://www.pragisotech.in/case-studies" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.pragisotech.in/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Case Studies",
+                  item: "https://www.pragisotech.in/case-studies",
+                },
+              ],
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://www.pragisotech.in/case-studies/#collection",
+              url: "https://www.pragisotech.in/case-studies",
+              name: title,
+              description: description,
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: caseStudies.map((c, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  url: `https://www.pragisotech.in/case-studies/${c.slug}`,
+                  name: c.name,
+                  description: c.desc,
+                })),
+              },
+            },
+          ],
+        }),
+      },
     ],
   }),
 });

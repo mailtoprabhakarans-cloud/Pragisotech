@@ -1,0 +1,21 @@
+{
+  "name": "Pragiso Soft Technologies",
+  "short_name": "PragisoTech",
+  "description": "Pragiso Soft Technologies builds modern websites, mobile apps, digital marketing and UI/UX design solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

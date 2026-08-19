@@ -318,8 +318,8 @@ export function Hero() {
               animationDelay: "1100ms",
             }}
           >
-            Pragiso Soft Technologies transforms ideas into powerful websites, mobile applications,
-            digital experiences and growth-focused solutions.
+            Pragiso Soft Technologies — Coimbatore's leading IT company — transforms ideas into powerful websites, mobile applications,
+            digital experiences and growth-focused marketing solutions for startups and enterprises.
           </p>
           <div
             className="mt-9 flex flex-wrap items-center gap-3 opacity-0"
@@ -338,7 +338,7 @@ export function Hero() {
             </Button>
           </div>
           <p className="mt-10 text-xs font-semibold tracking-[0.32em] text-muted-foreground uppercase text-shimmer-animated">
-            Design • Technology • Growth
+            Best IT Company in Coimbatore • Design • Technology • Growth
           </p>
         </div>
 
