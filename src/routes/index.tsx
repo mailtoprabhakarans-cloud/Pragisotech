@@ -240,6 +240,56 @@ export const Route = createFileRoute("/")({
               datePublished: "2024-01-01T00:00:00+05:30",
               dateModified: "2026-08-19T00:00:00+05:30",
             },
+            // ─── Site Navigation Elements (For Google Sitelinks) ───
+            {
+              "@type": "ItemList",
+              "@id": "https://www.pragisotech.in/#sitelinks",
+              name: "Services & Key Pages",
+              itemListElement: [
+                {
+                  "@type": "SiteNavigationElement",
+                  position: 1,
+                  name: "Web Development Services",
+                  description: "Custom web application and e-commerce development in Coimbatore",
+                  url: "https://www.pragisotech.in/#services",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  position: 2,
+                  name: "Mobile App Development",
+                  description: "Android, iOS and Flutter app development solutions",
+                  url: "https://www.pragisotech.in/#services",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  position: 3,
+                  name: "Digital Marketing & SEO",
+                  description: "SEO, Google Ads, Meta Ads and lead generation services",
+                  url: "https://www.pragisotech.in/#services",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  position: 4,
+                  name: "UI/UX Design",
+                  description: "Intuitive user experience and interface design",
+                  url: "https://www.pragisotech.in/#services",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  position: 5,
+                  name: "Case Studies & Work",
+                  description: "Client success stories and measured project results",
+                  url: "https://www.pragisotech.in/case-studies",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  position: 6,
+                  name: "Contact Pragiso Soft Technologies",
+                  description: "Get in touch for custom software development projects",
+                  url: "https://www.pragisotech.in/#contact",
+                },
+              ],
+            },
             // ─── FAQ Schema (high-value search queries) ───
             {
               "@type": "FAQPage",
