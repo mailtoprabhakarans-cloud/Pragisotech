@@ -25,6 +25,7 @@ import appCss from "../styles.css?url";
 import { Toaster } from "@/components/ui/sonner";
 import { Button } from "@/components/ui/button";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Analytics } from "@vercel/analytics/react";
 import logo from "@/assets/pragiso-mark.png.asset.json";
 
 const logoSrc = typeof logo === "string" ? logo : logo?.url || "/favicon.png";
@@ -420,6 +421,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Toaster position="top-right" />
+      <Analytics />
     </QueryClientProvider>
   );
 }
