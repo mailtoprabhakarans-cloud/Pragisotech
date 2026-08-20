@@ -322,11 +322,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=5" },
-      { title: "Pragiso Soft Technologies | Best IT Company in Coimbatore | Web & App Development" },
+      { title: "Best IT Company in Coimbatore | Pragiso Soft Technologies" },
       {
         name: "description",
         content:
-          "Pragiso Soft Technologies — the best IT company in Coimbatore offering top-rated web development, mobile app development, UI/UX design, SEO & digital marketing services. Trusted software development partner for startups and enterprises across Tamil Nadu and India.",
+          "Top IT company in Coimbatore offering web & mobile app development, UI/UX design, and digital marketing. Partner with Pragiso for scalable digital solutions.",
       },
       {
         name: "keywords",

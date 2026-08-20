@@ -13,10 +13,9 @@ import { CallToAction } from "@/components/site/CallToAction";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 
-const title =
-  "Best IT Company in Coimbatore | Web Development, App Development & Digital Marketing Agency | Pragiso Soft Technologies";
+const title = "Best IT Company in Coimbatore | Pragiso Soft Technologies";
 const description =
-  "Pragiso Soft Technologies — Coimbatore's top-rated IT company specializing in custom web development, mobile app development, UI/UX design, SEO, and digital marketing. Best software development company in Coimbatore delivering world-class digital solutions for startups and enterprises. Get a free consultation today.";
+  "Top IT company in Coimbatore offering web & mobile app development, UI/UX design, and digital marketing. Partner with Pragiso for scalable digital solutions.";
 
 export const Route = createFileRoute("/")({
   component: Index,
