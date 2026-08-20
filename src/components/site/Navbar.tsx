@@ -4,6 +4,7 @@ import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/pragiso-mark.png.asset.json";
+import { PragisoBrandBadge } from "./PragisoBrandLogo";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -24,8 +25,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -46,23 +46,8 @@ export function Navbar() {
         aria-label="Main"
         className="mx-auto grid fluid-container grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3.5 3xl:py-5"
       >
-        <a href="#home" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
-          <img
-            src={logoSrc}
-            alt="Pragiso Soft Technologies logo"
-            width={40}
-            height={40}
-            className="h-9 w-9 sm:h-10 sm:w-10 3xl:h-12 3xl:w-12 shrink-0 rounded-lg bg-foreground object-contain p-0.5 transition-all duration-500 group-hover:rotate-[360deg] group-hover:shadow-[0_0_20px_-5px_var(--electric)]"
-          />
-
-          <span className="min-w-0">
-            <span className="block truncate text-sm sm:text-base 3xl:text-lg font-bold tracking-[0.16em] uppercase transition-colors duration-300 group-hover:text-accent">
-              Pragiso
-            </span>
-            <span className="block truncate text-[10px] sm:text-xs 3xl:text-sm tracking-[0.28em] text-accent uppercase">
-              Soft Technologies
-            </span>
-          </span>
+        <a href="#home" className="group flex min-w-0 items-center">
+          <PragisoBrandBadge markSrc={logoSrc} subtitle="Soft Technologies" size="md" />
         </a>
 
         <div className="flex items-center gap-2 3xl:gap-4">

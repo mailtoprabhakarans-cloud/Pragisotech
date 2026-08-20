@@ -1,6 +1,7 @@
 import { Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/pragiso-mark.png.asset.json";
+import { PragisoBrandBadge } from "./PragisoBrandLogo";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -30,23 +31,8 @@ export function Footer() {
       <div className="mx-auto fluid-container py-16 3xl:py-24">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 3xl:gap-16">
           <div>
-            <div className="flex min-w-0 items-center gap-3">
-              <img
-                src={logoSrc}
-                alt="Pragiso Soft Technologies logo"
-                width={44}
-                height={44}
-                loading="lazy"
-                className="size-10 3xl:size-12 shrink-0 rounded-lg bg-foreground object-contain p-0.5 transition-all duration-500 hover:rotate-[360deg] hover:shadow-[0_0_20px_-5px_var(--electric)]"
-              />
-              <span className="min-w-0">
-                <span className="block text-sm sm:text-base 3xl:text-lg font-bold tracking-[0.14em] uppercase">
-                  Pragiso Soft Technologies
-                </span>
-                <span className="block text-[10px] sm:text-xs 3xl:text-sm tracking-[0.3em] text-accent uppercase">
-                  Innovate • Build • Grow
-                </span>
-              </span>
+            <div className="flex min-w-0 items-center">
+              <PragisoBrandBadge markSrc={logoSrc} subtitle="Innovate • Build • Grow" size="lg" />
             </div>
             <p className="mt-5 max-w-xs text-sm sm:text-base 3xl:text-lg leading-relaxed text-muted-foreground">
               Solutions that empower growth — modern web, mobile, design and marketing built for
