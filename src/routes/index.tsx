@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "best IT company in Coimbatore, best software development company Coimbatore, best web development company Coimbatore, best app development company Coimbatore, best digital marketing agency Coimbatore, best UI UX design company Coimbatore, best SEO company Coimbatore, top software company Coimbatore, best portfolio website design, website design Coimbatore, mobile app development Coimbatore, ecommerce website development Coimbatore, custom software development Coimbatore, React development India, Flutter app development India, affordable web development Coimbatore, best startup IT company Tamil Nadu, IT company near me, software development near me Coimbatore, best support IT company Coimbatore, top 10 IT companies in Coimbatore, web application development Coimbatore, best digital agency in India, best web design company Tamil Nadu",
+          "pragisotech, pragisotech.in, pragiso tech, www.pragisotech.in, best IT company in Coimbatore, best software development company Coimbatore, best web development company Coimbatore, best app development company Coimbatore, best digital marketing agency Coimbatore, best UI UX design company Coimbatore, best SEO company Coimbatore, top software company Coimbatore, best portfolio website design, website design Coimbatore, mobile app development Coimbatore, ecommerce website development Coimbatore, custom software development Coimbatore, React development India, Flutter app development India, affordable web development Coimbatore, best startup IT company Tamil Nadu, IT company near me, software development near me Coimbatore, best support IT company Coimbatore, top 10 IT companies in Coimbatore, web application development Coimbatore, best digital agency in India, best web design company Tamil Nadu, Pragiso Soft Technologies, PragisoTech",
       },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -54,7 +54,7 @@ export const Route = createFileRoute("/")({
               "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
               "@id": "https://www.pragisotech.in/#organization",
               name: "Pragiso Soft Technologies",
-              alternateName: ["PragisoTech", "Pragiso", "Pragiso Softs"],
+              alternateName: ["PragisoTech", "pragisotech", "pragisotech.in", "Pragiso", "Pragiso Softs"],
               url: "https://www.pragisotech.in",
               logo: {
                 "@type": "ImageObject",
@@ -64,9 +64,9 @@ export const Route = createFileRoute("/")({
               },
               image: "https://www.pragisotech.in/pragiso-services-hero.png",
               description:
-                "Best IT company in Coimbatore offering expert web development, mobile app development, UI/UX design, SEO and digital marketing services. We build world-class digital products for startups, SMBs and enterprises across India.",
+                "Best IT company in Coimbatore offering expert web development, mobile app development, UI/UX design, SEO and digital marketing services by PragisoTech (pragisotech.in). We build world-class digital products for startups, SMBs and enterprises across India.",
               slogan: "Innovate • Build • Grow",
-              email: "pragisosofts@gmail.com",
+              email: ["contact@pragisotech.in", "info@pragisotech.in"],
               telephone: "+919080961649",
               priceRange: "$$",
               currenciesAccepted: "INR",

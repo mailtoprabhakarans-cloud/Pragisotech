@@ -124,22 +124,27 @@ export function Footer() {
             </h3>
             <ul className="mt-5 space-y-3 text-sm sm:text-base 3xl:text-lg text-muted-foreground">
               <li>
-                <a href="mailto:pragisosofts@gmail.com" className="hover:text-accent">
-                  pragisosofts@gmail.com
+                <a href="mailto:contact@pragisotech.in" className="hover:text-accent transition-colors">
+                  contact@pragisotech.in
                 </a>
               </li>
               <li>
-                <a href="https://www.pragisotech.in" className="hover:text-accent">
+                <a href="mailto:info@pragisotech.in" className="hover:text-accent transition-colors">
+                  info@pragisotech.in
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pragisotech.in" className="hover:text-accent transition-colors font-medium">
                   www.pragisotech.in
                 </a>
               </li>
-              <li>India</li>
+              <li>Coimbatore, India</li>
             </ul>
           </div>
         </div>
 
         <p className="mt-14 border-t border-border pt-7 text-center text-xs sm:text-sm 3xl:text-base text-muted-foreground">
-          © 2026 Pragiso Soft Technologies. All Rights Reserved.
+          © 2026 Pragiso Soft Technologies (PragisoTech • www.pragisotech.in). All Rights Reserved.
         </p>
       </div>
     </footer>

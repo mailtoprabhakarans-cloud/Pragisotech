@@ -18,12 +18,18 @@ import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 const details = [
   {
     icon: Mail,
-    label: "Email",
-    value: "pragisosofts@gmail.com",
-    href: "mailto:pragisosofts@gmail.com",
+    label: "Contact Email",
+    value: "contact@pragisotech.in",
+    href: "mailto:contact@pragisotech.in",
+  },
+  {
+    icon: Mail,
+    label: "General Inquiry",
+    value: "info@pragisotech.in",
+    href: "mailto:info@pragisotech.in",
   },
   { icon: Phone, label: "Phone", value: "+91 90809 61649", href: "tel:+919080961649" },
-  { icon: MapPin, label: "Location", value: "India", href: undefined },
+  { icon: MapPin, label: "Location", value: "Coimbatore, India", href: undefined },
 ];
 
 const socials = [
@@ -54,7 +60,7 @@ export function Contact() {
       if (!isSupabaseConfigured()) {
         toast.info("Inquiry received!", {
           description:
-            "Note: Add your VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in .env to save inquiries to Supabase and send emails to pragisosofts@gmail.com.",
+            "Note: Add your VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in .env to save inquiries to Supabase and send emails to contact@pragisotech.in.",
         });
       } else {
         const { error } = await supabase.from("inquiries").insert([

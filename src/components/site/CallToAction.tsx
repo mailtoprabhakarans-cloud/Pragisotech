@@ -32,7 +32,7 @@ export function CallToAction() {
               </a>
             </Button>
             <Button variant="glass" size="xl" className="btn-magnetic rounded-xl" asChild>
-              <a href="mailto:pragisosofts@gmail.com">
+              <a href="mailto:contact@pragisotech.in">
                 <MessageCircle /> Talk to Our Team
               </a>
             </Button>
