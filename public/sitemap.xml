@@ -4,12 +4,24 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.pragisotech.in/</loc>
-    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.pragisotech.in/pragiso-services-hero.png</image:loc>
       <image:title>Pragiso Soft Technologies - Digital Agency</image:title>
+    </image:image>
+  </url>
+
+  <!-- Products: Pragiso CRM (7-Day Demo) -->
+  <url>
+    <loc>https://www.pragisotech.in/products</loc>
+    <lastmod>2026-10-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.pragisotech.in/pragiso-services-hero.png</image:loc>
+      <image:title>Pragiso CRM - Field Service Management Software</image:title>
     </image:image>
   </url>
 

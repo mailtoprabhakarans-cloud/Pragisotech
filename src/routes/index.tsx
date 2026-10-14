@@ -12,6 +12,7 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { CallToAction } from "@/components/site/CallToAction";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { ProductSpotlight } from "@/components/site/ProductSpotlight";
 
 const title = "Best IT Company in Coimbatore | Pragiso Soft Technologies";
 const description =
@@ -375,6 +376,7 @@ function Index() {
         <Hero />
         <About />
         <Services />
+        <ProductSpotlight />
         <WhyUs />
         <Portfolio />
         <CaseStudy />

@@ -8,6 +8,7 @@ import { PragisoBrandBadge } from "./PragisoBrandLogo";
 
 const links = [
   { label: "Home", href: "#home" },
+  { label: "Products", href: "/products", badge: "CRM" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
@@ -31,7 +32,7 @@ export function Navbar() {
   }, []);
 
   const linkClass =
-    "link-underline rounded-full px-3.5 py-2 text-sm 3xl:text-base 3xl:px-4 text-muted-foreground transition-all duration-300 hover:bg-secondary/60 hover:text-foreground";
+    "link-underline rounded-full px-3.5 py-2 text-sm 3xl:text-base 3xl:px-4 text-muted-foreground transition-all duration-300 hover:bg-secondary/60 hover:text-foreground inline-flex items-center gap-1.5";
 
   return (
     <header
@@ -46,9 +47,9 @@ export function Navbar() {
         aria-label="Main"
         className="mx-auto grid fluid-container grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3.5 3xl:py-5"
       >
-        <a href="#home" className="group flex min-w-0 items-center">
+        <Link to="/" hash="home" className="group flex min-w-0 items-center">
           <PragisoBrandBadge markSrc={logoSrc} subtitle="Soft Technologies" size="md" />
-        </a>
+        </Link>
 
         <div className="flex items-center gap-2 3xl:gap-4">
           <ul className="hidden items-center gap-1 xl:flex 3xl:gap-2">
@@ -63,6 +64,11 @@ export function Navbar() {
                 ) : l.href.startsWith("/") ? (
                   <Link to={l.href} className={linkClass}>
                     {l.label}
+                    {l.badge && (
+                      <span className="rounded-full bg-cyan/20 px-1.5 py-0.2 text-[10px] font-bold text-cyan tracking-wider">
+                        {l.badge}
+                      </span>
+                    )}
                   </Link>
                 ) : (
                   <a href={l.href} className={linkClass}>
@@ -127,9 +133,14 @@ export function Navbar() {
                 <Link
                   to={l.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-4 py-3 text-sm font-medium text-muted-foreground transition-all duration-300 hover:bg-secondary/60 hover:text-foreground hover:translate-x-1"
+                  className="flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium text-muted-foreground transition-all duration-300 hover:bg-secondary/60 hover:text-foreground hover:translate-x-1"
                 >
-                  {l.label}
+                  <span>{l.label}</span>
+                  {l.badge && (
+                    <span className="rounded-full bg-cyan/20 px-2 py-0.5 text-[10px] font-bold text-cyan tracking-wider">
+                      {l.badge}
+                    </span>
+                  )}
                 </Link>
               ) : (
                 <a

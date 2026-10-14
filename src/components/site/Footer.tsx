@@ -5,10 +5,18 @@ import { PragisoBrandBadge } from "./PragisoBrandLogo";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
+  { label: "Products (Pragiso CRM)", href: "/products" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Contact", href: "#contact" },
+];
+
+const products = [
+  { label: "Pragiso CRM", href: "/products", badge: "7-Day Demo" },
+  { label: "Field Service Mobile PWA", href: "/products" },
+  { label: "GPS Fleet Tracking System", href: "/products" },
 ];
 
 const services = ["Web Development", "App Development", "Digital Marketing", "UI/UX Design"];
@@ -86,16 +94,37 @@ export function Footer() {
           </nav>
 
           <div>
-            <h3 className="text-sm sm:text-base 3xl:text-lg font-semibold tracking-[0.16em] uppercase">
-              Services
+            <h3 className="text-sm sm:text-base 3xl:text-lg font-semibold tracking-[0.16em] uppercase text-foreground">
+              Products & Solutions
             </h3>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-5 space-y-2.5">
+              {products.map((p) => (
+                <li key={p.label}>
+                  <Link
+                    to={p.href}
+                    className="link-underline text-sm sm:text-base 3xl:text-lg text-muted-foreground transition-all duration-300 hover:text-accent hover:translate-x-1 inline-flex items-center gap-2"
+                  >
+                    <span>{p.label}</span>
+                    {p.badge && (
+                      <span className="rounded-full bg-cyan/20 px-1.5 py-0.5 text-[10px] font-bold text-cyan">
+                        {p.badge}
+                      </span>
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="mt-6 text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase text-muted-foreground">
+              Core Services
+            </h4>
+            <ul className="mt-3 space-y-2">
               {services.map((s) => (
                 <li key={s}>
                   <Link
                     to="/"
                     hash="services"
-                    className="link-underline text-sm sm:text-base 3xl:text-lg text-muted-foreground transition-all duration-300 hover:text-accent hover:translate-x-1 inline-block"
+                    className="link-underline text-xs sm:text-sm text-muted-foreground/80 transition-all duration-300 hover:text-accent hover:translate-x-1 inline-block"
                   >
                     {s}
                   </Link>
