@@ -26,6 +26,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Button } from "@/components/ui/button";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import logo from "@/assets/pragiso-mark.png.asset.json";
 
 const logoSrc = typeof logo === "string" ? logo : logo?.url || "/favicon.png";
@@ -422,6 +423,7 @@ function RootComponent() {
       <Outlet />
       <Toaster position="top-right" />
       <Analytics />
+      <SpeedInsights />
     </QueryClientProvider>
   );
 }
