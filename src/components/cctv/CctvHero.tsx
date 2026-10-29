@@ -63,7 +63,7 @@ export function CctvHero({ onScrollToForm }: CctvHeroProps) {
             </p>
 
             <p className="mt-3 text-sm sm:text-base leading-relaxed text-muted-foreground">
-              We provide genuine Secure Plus surveillance hardware, professional camera mounting, multi-channel DVR/NVR recording setups, and remote mobile viewing for residential homes, apartment complexes, and commercial establishments across Coimbatore.
+              We provide genuine surveillance hardware, professional camera mounting, and remote mobile viewing for residential homes and commercial establishments — <strong>plus wholesale stock and bulk hardware supply for local CCTV sub-dealers and installers across Coimbatore.</strong>
             </p>
 
             {/* CTAs */}
@@ -100,17 +100,21 @@ export function CctvHero({ onScrollToForm }: CctvHeroProps) {
             </div>
 
             {/* Quick Guarantees */}
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground">
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground">
               <div className="flex items-center gap-2">
                 <span className="size-1.5 rounded-full bg-cyan" />
                 <span>100% Genuine Hardware</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="size-1.5 rounded-full bg-teal" />
-                <span>On-Site Site Survey</span>
+                <span>Wholesale Dealer Supply</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="size-1.5 rounded-full bg-accent" />
+                <span>On-Site Installation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="size-1.5 rounded-full bg-emerald-400" />
                 <span>Mobile App Setup</span>
               </div>
             </div>

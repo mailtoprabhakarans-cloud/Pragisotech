@@ -160,33 +160,44 @@ export function CctvEnquiryForm({ initialPropertyType = "Residential" }: CctvEnq
                     CCTV Installation & Product Inquiry
                   </h3>
 
-                  {/* Property Type Radio Selector */}
+                  {/* Property / Customer Category Radio Selector */}
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Property Category <span className="text-accent">*</span>
+                      Customer Category <span className="text-accent">*</span>
                     </label>
-                    <div className="mt-2 grid grid-cols-2 gap-3">
+                    <div className="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                       <button
                         type="button"
                         onClick={() => setPropertyType("Residential")}
-                        className={`rounded-xl border px-4 py-2.5 text-xs sm:text-sm font-semibold transition-all ${
+                        className={`rounded-xl border px-3 py-2 text-xs font-semibold transition-all ${
                           propertyType === "Residential"
                             ? "border-cyan bg-cyan/15 text-cyan"
                             : "border-border/80 bg-secondary/30 text-muted-foreground hover:text-foreground"
                         }`}
                       >
-                        Residential (Home / Apartment)
+                        Residential (Home)
                       </button>
                       <button
                         type="button"
                         onClick={() => setPropertyType("Commercial")}
-                        className={`rounded-xl border px-4 py-2.5 text-xs sm:text-sm font-semibold transition-all ${
+                        className={`rounded-xl border px-3 py-2 text-xs font-semibold transition-all ${
                           propertyType === "Commercial"
                             ? "border-accent bg-accent/15 text-accent"
                             : "border-border/80 bg-secondary/30 text-muted-foreground hover:text-foreground"
                         }`}
                       >
-                        Commercial (Shop / Office / Warehouse)
+                        Commercial (Shop / Office)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setPropertyType("Dealer")}
+                        className={`rounded-xl border px-3 py-2 text-xs font-semibold transition-all ${
+                          propertyType === "Dealer"
+                            ? "border-teal bg-teal/20 text-teal font-bold shadow-xs"
+                            : "border-border/80 bg-secondary/30 text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        Sub-Dealer / Bulk Supply
                       </button>
                     </div>
                   </div>
@@ -207,7 +218,8 @@ export function CctvEnquiryForm({ initialPropertyType = "Residential" }: CctvEnq
                       className="mt-2 w-full rounded-xl border border-border/80 bg-secondary/40 px-4 py-3 text-sm text-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                     >
                       <option value="Installation Quote">Complete New Camera Installation & Setup</option>
-                      <option value="Product Availability & Pricing">Secure Plus Product Availability & Pricing</option>
+                      <option value="Sub-Dealer Wholesale Supply">Wholesale Dealer Supply / Bulk Stock Purchase</option>
+                      <option value="Product Availability & Pricing">CCTV Product Availability & Pricing</option>
                       <option value="DVR/NVR Storage Upgrade">DVR / NVR Upgrade or Hard Disk Storage</option>
                       <option value="Maintenance & Troubleshooting">CCTV Maintenance & Troubleshooting</option>
                     </select>

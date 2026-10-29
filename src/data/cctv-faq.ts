@@ -35,5 +35,11 @@ export const cctvFaqList: CctvFaqItem[] = [
     answer:
       "You can request a custom CCTV installation quotation by contacting our team through WhatsApp, phone, or our website inquiry form. We discuss your property layout, camera count requirements, and storage preferences to provide an upfront quote based on a thorough site survey [TODO: Add official pricing tiers].",
   },
+  {
+    id: "faq-dealer-wholesale-supply",
+    question: "Do you supply CCTV cameras and accessories in bulk to other dealers and installers?",
+    answer:
+      "Yes, Pragiso Soft Technologies supplies genuine CCTV cameras, DVR/NVR recorders, and installation accessories to local sub-dealers, electrical contractors, and security technicians across Coimbatore. As an authorised distributor, we offer wholesale dealer margins, bulk quantity dispatch, warranty support, and direct hardware fulfillment for installation businesses.",
+  },
 ];
 

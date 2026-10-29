@@ -60,12 +60,32 @@ export const cctvConfig = {
 
   // Authorised Dealer Credentials & Official Assets
   dealer: {
-    brandName: "Secure Plus",
-    authorizedStatement: "Pragiso Soft Technologies is an authorised dealer of Secure Plus CCTV cameras.",
-    logoUrl: "/secure-plus-logo.jpg", // Official Secure Plus logo provided by client
-    // [TODO: Upload scanned copy of official dealer authorization letter/certificate]
-    dealerAuthLetterUrl: "/placeholder-authorization-letter.jpg",
-    hasAuthLetterImage: false, // Set to true once verified certificate image is placed in public/
+    brandName: "Secure Plus / Umaiya Security System",
+    authorizedStatement: "Pragiso Soft Technologies is an authorised dealer of Secure Plus & Umaiya Security System CCTV cameras.",
+    certifyingAuthority: "Umaiya Security System (Manufacturer / Distributor)",
+    certificateTitle: "Authorized Dealer Certificate",
+    certificateIssueDate: "01-10-2026",
+    certificateValidUntil: "01-10-2027",
+    logoUrl: "/secure-plus-logo.jpg", // Official logo provided by client
+    dealerAuthLetterUrl: "/authorized-dealer-certificate.jpg", // Verified official certificate uploaded by client
+    hasAuthLetterImage: true,
+  },
+
+  // Dealer & Wholesale Supply (B2B Supply for Sub-Dealers & Installers)
+  dealerSupply: {
+    enabled: true,
+    title: "Dealer & Wholesale Supply",
+    subtitle: "We supply CCTV hardware in bulk to local sub-dealers, security contractors, and installers.",
+    description:
+      "Looking for reliable CCTV stock in Coimbatore? We supply genuine CCTV cameras, multi-channel DVR/NVR units, SMPS power supplies, and cabling in bulk with attractive dealer margins, warranty backing, and prompt local dispatch.",
+    benefits: [
+      "Wholesale dealer price margins on bulk camera orders",
+      "Direct manufacturer warranty backing and serial tracking",
+      "Ready stock availability in Coimbatore for quick turnaround",
+      "Complete ecosystem: Dome, Bullet, PTZ, DVR/NVR, hard disks, and cables",
+    ],
+    whatsappPrefilledMessage:
+      "Hi Pragiso, I am a CCTV dealer/installer in Tamil Nadu. I would like to get your wholesale dealer price list and bulk supply terms.",
   },
 
   // Modular Service Offerings (Toggle on/off as needed)

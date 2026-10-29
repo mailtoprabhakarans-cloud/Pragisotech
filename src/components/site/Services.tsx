@@ -48,8 +48,8 @@ const services = [
     no: "05",
     icon: ShieldCheck,
     title: "CCTV & Security Surveillance",
-    desc: "Authorised Secure Plus CCTV dealer in Coimbatore — camera supply, home and commercial installation, and mobile viewing setup.",
-    items: ["Home CCTV", "Commercial CCTV", "DVR/NVR Setup", "Mobile Monitoring", "Maintenance"],
+    desc: "Authorised CCTV dealer in Coimbatore — camera supply & installation for homes, businesses, and wholesale supply for sub-dealers.",
+    items: ["Home CCTV", "Commercial CCTV", "Dealer Wholesale Supply", "DVR/NVR Setup", "Maintenance"],
     link: "/secure-plus-cctv",
   },
 ];
