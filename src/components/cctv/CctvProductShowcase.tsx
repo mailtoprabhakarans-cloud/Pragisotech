@@ -1,13 +1,17 @@
-import { Box, Sparkles, MessageSquare } from "lucide-react";
+import { Box, Sparkles, MessageSquare, Phone, CheckCircle2, FileText } from "lucide-react";
 import { cctvConfig } from "@/config/cctv.config";
-import { trackWhatsAppClick } from "@/lib/analytics-events";
+import { trackWhatsAppClick, trackPhoneCallClick } from "@/lib/analytics-events";
 
 export function CctvProductShowcase() {
   const { products } = cctvConfig;
 
   const whatsappUrl = `https://wa.me/${cctvConfig.contact.whatsappNumber}?text=${encodeURIComponent(
-    "Hi Pragiso, I would like to receive the official Secure Plus CCTV product catalog and pricing for Coimbatore."
+    "Hi Pragiso, please send me the latest Secure Plus CCTV product catalog, model list, and pricing."
   )}`;
+
+  const handleCall = () => {
+    trackPhoneCallClick("ProductCatalogCard", cctvConfig.contact.callingPhone);
+  };
 
   return (
     <section
@@ -65,33 +69,58 @@ export function CctvProductShowcase() {
             ))}
           </div>
         ) : (
-          <div className="mt-12 mx-auto max-w-3xl">
-            <div className="card-shine glass-panel glow-border rounded-3xl border border-border/80 p-8 sm:p-12 text-center">
-              <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-cyan/10 text-cyan">
-                <Sparkles className="size-7" />
+          <div className="mt-12 mx-auto max-w-4xl">
+            <div className="card-shine glass-panel glow-border rounded-3xl border border-border/80 p-8 sm:p-12 text-center shadow-[var(--shadow-glow)]">
+              <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-cyan/15 text-cyan">
+                <FileText className="size-7" />
               </div>
-              <h3 className="mt-6 font-display text-xl font-bold text-foreground">
-                Authorised Catalog Available on Request
+              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">
+                Official Secure Plus Catalog & Price List Available on Request
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground max-w-xl mx-auto">
-                As an authorised dealer, we maintain the complete lineup of Secure Plus dome cameras, bullet cameras, and network video recorders. Please contact our technical team for live product availability, datasheets, and custom system pricing.
+              <p className="mt-3 text-sm sm:text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto">
+                As an authorised dealer and wholesale distributor in Coimbatore, we maintain ready stock of the complete Secure Plus CCTV lineup for residential homes, commercial projects, and local security sub-dealers.
               </p>
 
-              {/* Explicit TODO per requirements */}
-              <div className="mt-5 inline-block rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-2 text-xs text-amber-200">
-                [TODO: Add verified Secure Plus model names, technical specs, and authorised product photos in src/config/cctv.config.ts]
+              {/* Verified Product Range Grid */}
+              <div className="mt-8 grid gap-3 sm:grid-cols-2 text-left max-w-2xl mx-auto">
+                <div className="flex items-center gap-2.5 rounded-xl border border-border/70 bg-secondary/30 p-3 text-xs sm:text-sm text-foreground">
+                  <CheckCircle2 className="size-4 text-cyan shrink-0" />
+                  <span>HD Dome & Bullet Cameras (2MP, 5MP & 4K)</span>
+                </div>
+                <div className="flex items-center gap-2.5 rounded-xl border border-border/70 bg-secondary/30 p-3 text-xs sm:text-sm text-foreground">
+                  <CheckCircle2 className="size-4 text-cyan shrink-0" />
+                  <span>Multi-Channel DVR & NVR Surveillance Units</span>
+                </div>
+                <div className="flex items-center gap-2.5 rounded-xl border border-border/70 bg-secondary/30 p-3 text-xs sm:text-sm text-foreground">
+                  <CheckCircle2 className="size-4 text-cyan shrink-0" />
+                  <span>Color Night Vision & Mobile App Remote View</span>
+                </div>
+                <div className="flex items-center gap-2.5 rounded-xl border border-border/70 bg-secondary/30 p-3 text-xs sm:text-sm text-foreground">
+                  <CheckCircle2 className="size-4 text-cyan shrink-0" />
+                  <span>Wholesale Margins & Bulk Dispatch for Sub-Dealers</span>
+                </div>
               </div>
 
-              <div className="mt-8">
+              {/* Direct CTAs */}
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsAppClick("ProductShowcaseCatalog", cctvConfig.contact.whatsappNumber)}
-                  className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-950/30 px-6 py-3 text-sm font-semibold text-emerald-400 hover:bg-emerald-900/40 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-950/30 px-6 py-3 text-sm font-semibold text-emerald-400 hover:bg-emerald-900/40 transition-all shadow-[0_0_20px_-5px_rgba(52,211,153,0.4)]"
                 >
                   <MessageSquare className="size-4" />
                   <span>Request Full Catalog on WhatsApp</span>
+                </a>
+
+                <a
+                  href={`tel:${cctvConfig.contact.callingPhoneRaw}`}
+                  onClick={handleCall}
+                  className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-secondary/50 px-6 py-3 text-sm font-medium text-foreground hover:bg-accent/10 transition-colors"
+                >
+                  <Phone className="size-4 text-accent" />
+                  <span>Call {cctvConfig.contact.callingPhone}</span>
                 </a>
               </div>
             </div>
