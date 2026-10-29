@@ -60,14 +60,15 @@ export const cctvConfig = {
 
   // Authorised Dealer Credentials & Official Assets
   dealer: {
-    brandName: "Secure Plus / Umaiya Security System",
-    authorizedStatement: "Pragiso Soft Technologies is an authorised dealer of Secure Plus & Umaiya Security System CCTV cameras.",
-    certifyingAuthority: "Umaiya Security System (Manufacturer / Distributor)",
+    brandName: "Secure Plus",
+    authorizedStatement: "Pragiso Soft Technologies is an authorised dealer of SECURE PLUS CCTV cameras.",
+    certifyingAuthority: "Umaiya Security System",
+    signatory: "Authorised Signatory By UMAIYA SECURITY SYSTEM",
     certificateTitle: "Authorized Dealer Certificate",
     certificateIssueDate: "01-10-2026",
     certificateValidUntil: "01-10-2027",
-    logoUrl: "/secure-plus-logo.jpg", // Official logo provided by client
-    dealerAuthLetterUrl: "/authorized-dealer-certificate.jpg", // Verified official certificate uploaded by client
+    logoUrl: "/secure-plus-logo.jpg", // Official Secure Plus logo
+    dealerAuthLetterUrl: "/authorized-dealer-certificate.jpg", // Verified official SECURE PLUS certificate
     hasAuthLetterImage: true,
   },
 

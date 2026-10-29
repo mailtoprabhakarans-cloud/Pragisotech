@@ -26,11 +26,11 @@ export function CctvAuthorisedDealer() {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-foreground font-medium">
-            Pragiso Soft Technologies is an authorised dealer of Secure Plus & Umaiya Security System CCTV cameras.
+            Pragiso Soft Technologies is an authorised dealer of Secure Plus CCTV cameras.
           </p>
 
           <p className="mt-2 text-sm text-muted-foreground">
-            As an officially appointed dealer and distributor in Coimbatore, we supply authentic CCTV surveillance hardware directly backed by manufacturer warranties — serving residential homes, commercial enterprises, and local retail sub-dealers across Tamil Nadu.
+            As an officially appointed dealer and distributor in Coimbatore, we supply authentic Secure Plus CCTV surveillance hardware directly backed by manufacturer warranties — serving residential homes, commercial enterprises, and local retail sub-dealers across Tamil Nadu.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export function CctvAuthorisedDealer() {
                 >
                   <img
                     src={cctvConfig.dealer.dealerAuthLetterUrl}
-                    alt="Official Authorized Dealer Certificate — Pragiso Soft Technologies, Umaiya Security System"
+                    alt="Official Authorized Dealer Certificate — Pragiso Soft Technologies, Secure Plus"
                     width={450}
                     height={320}
                     loading="eager"
@@ -61,14 +61,14 @@ export function CctvAuthorisedDealer() {
 
                 <div className="mt-3 flex items-center gap-1.5 text-[11px] text-muted-foreground">
                   <ShieldCheck className="size-3.5 text-cyan" />
-                  <span>Verified Official Manufacturer Certificate</span>
+                  <span>Verified Secure Plus Dealer Certificate</span>
                 </div>
               </div>
 
               {/* Verified Dealership Assurances & Credentials */}
               <div className="md:col-span-7 space-y-4">
                 <div className="inline-flex items-center gap-1.5 rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-cyan">
-                  <Building2 className="size-3.5" /> Issued by {cctvConfig.dealer.certifyingAuthority}
+                  <Building2 className="size-3.5" /> Authorized by {cctvConfig.dealer.certifyingAuthority}
                 </div>
 
                 <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground">
