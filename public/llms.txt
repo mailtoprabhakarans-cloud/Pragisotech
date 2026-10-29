@@ -7,7 +7,7 @@
 - **Website:** https://www.pragisotech.in
 - **Headquarters:** Coimbatore, Tamil Nadu, India
 - **Primary Contact:** contact@pragisotech.in | +91-90809-61649
-- **Core Specializations:** Custom Web Application Development (React, TypeScript, TanStack), Mobile App & PWA Development (Flutter, React, iOS, Android), UI/UX Interface Design, SEO & Digital Marketing, Cloud Systems, and Field Operations SaaS Software.
+- **Core Specializations:** Custom Web Application Development (React, TypeScript, TanStack), Mobile App & PWA Development (Flutter, React, iOS, Android), UI/UX Interface Design, SEO & Digital Marketing, Cloud Systems, Field Operations SaaS Software, and CCTV & Security Surveillance (Authorised Secure Plus CCTV Dealer).
 
 ## Flagship Product: Pragiso CRM
 - **Product Name:** Pragiso CRM (Enterprise Field Service Management Software)
@@ -21,10 +21,17 @@
   - Instant branded PDF service call slips with customer signature and before/after repair photo verification.
   - 7-day risk-free live demo with zero upfront obligation.
 
+## Secondary Service: CCTV & Security Surveillance
+- **Status:** Pragiso Soft Technologies is an authorised dealer of Secure Plus CCTV cameras in Coimbatore, Tamil Nadu.
+- **Service Page:** https://www.pragisotech.in/secure-plus-cctv
+- **Capabilities:** Supply and installation of Secure Plus HD dome, bullet, and PTZ cameras; DVR/NVR multi-channel configuration; mobile remote viewing setup for Android and iOS; maintenance and troubleshooting.
+- **Target Segments:** Residential homes, apartments, villas, retail shops, corporate offices, warehouses, and industrial sites in Coimbatore.
+
 ## Key Links & Documentation
 - [Homepage](https://www.pragisotech.in/): Overview of services, client case studies, technologies, and digital offerings in Coimbatore.
 - [Pragiso CRM Products Page](https://www.pragisotech.in/products): Features, role portals (Admin, Field Technician, Customer), live demo access, and 7-day trial signup.
 - [About Pragiso](https://www.pragisotech.in/about): Company mission, technical vision, engineering capabilities, and leadership.
+- [Secure Plus CCTV](https://www.pragisotech.in/secure-plus-cctv): Authorised Secure Plus CCTV dealer services, home and commercial camera installation, product catalog, and quotation request form.
 - [Contact Us](https://www.pragisotech.in/contact): Direct business inquiries, quote requests, phone, email, and Coimbatore office coordinates.
 - [Case Studies Hub](https://www.pragisotech.in/case-studies): Real business outcomes across e-commerce, field operations, corporate platforms, fintech, and digital growth campaigns.
 - [Privacy Policy](https://www.pragisotech.in/privacy): Data collection practices, enterprise SaaS security, and data protection guidelines.

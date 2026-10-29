@@ -181,6 +181,7 @@ export function Contact() {
                       <SelectItem value="app">App Development</SelectItem>
                       <SelectItem value="marketing">Digital Marketing</SelectItem>
                       <SelectItem value="design">UI/UX Design</SelectItem>
+                      <SelectItem value="cctv">CCTV & Security Surveillance</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

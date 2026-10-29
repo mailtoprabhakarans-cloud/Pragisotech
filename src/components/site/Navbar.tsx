@@ -9,6 +9,7 @@ import { PragisoBrandBadge } from "./PragisoBrandLogo";
 const links = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products", badge: "CRM" },
+  { label: "CCTV", href: "/secure-plus-cctv", badge: "New" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/#services" },
   { label: "Portfolio", href: "/#portfolio" },

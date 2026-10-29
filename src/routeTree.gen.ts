@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProductsRouteImport } from './routes/products'
+import { Route as SecurePlusCctvRouteImport } from './routes/secure-plus-cctv'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies.$slug'
@@ -43,6 +44,11 @@ const ProductsRoute = ProductsRouteImport.update({
   path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SecurePlusCctvRoute = SecurePlusCctvRouteImport.update({
+  id: '/secure-plus-cctv',
+  path: '/secure-plus-cctv',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/products': typeof ProductsRoute
+  '/secure-plus-cctv': typeof SecurePlusCctvRoute
   '/terms': typeof TermsRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/products': typeof ProductsRoute
+  '/secure-plus-cctv': typeof SecurePlusCctvRoute
   '/terms': typeof TermsRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/case-studies': typeof CaseStudiesIndexRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/products': typeof ProductsRoute
+  '/secure-plus-cctv': typeof SecurePlusCctvRoute
   '/terms': typeof TermsRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/products'
+    | '/secure-plus-cctv'
     | '/terms'
     | '/case-studies/$slug'
     | '/case-studies/'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/products'
+    | '/secure-plus-cctv'
     | '/terms'
     | '/case-studies/$slug'
     | '/case-studies'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/products'
+    | '/secure-plus-cctv'
     | '/terms'
     | '/case-studies/$slug'
     | '/case-studies/'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PrivacyRoute: typeof PrivacyRoute
   ProductsRoute: typeof ProductsRoute
+  SecurePlusCctvRoute: typeof SecurePlusCctvRoute
   TermsRoute: typeof TermsRoute
   CaseStudiesSlugRoute: typeof CaseStudiesSlugRoute
   CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
@@ -171,6 +184,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/secure-plus-cctv': {
+      id: '/secure-plus-cctv'
+      path: '/secure-plus-cctv'
+      fullPath: '/secure-plus-cctv'
+      preLoaderRoute: typeof SecurePlusCctvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PrivacyRoute: PrivacyRoute,
   ProductsRoute: ProductsRoute,
+  SecurePlusCctvRoute: SecurePlusCctvRoute,
   TermsRoute: TermsRoute,
   CaseStudiesSlugRoute: CaseStudiesSlugRoute,
   CaseStudiesIndexRoute: CaseStudiesIndexRoute,

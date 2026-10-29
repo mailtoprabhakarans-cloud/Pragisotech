@@ -68,7 +68,9 @@ export function About() {
                 Pragiso Soft Technologies is a top-rated IT company based in Coimbatore, Tamil Nadu,
                 helping businesses and startups transform ideas into modern digital products. From the
                 first strategy conversation to launch and beyond, we combine engineering discipline
-                with design craft to build platforms that perform and scale.
+                with design craft to build platforms that perform and scale. We are also an
+                authorised dealer of Secure Plus CCTV cameras, providing security surveillance supply
+                and installation services for homes and businesses in Coimbatore.
               </p>
               <p className="mt-4 text-base sm:text-lg 2xl:text-xl 3xl:text-2xl leading-relaxed text-muted-foreground">
                 As one of the best software development companies in Coimbatore, we work as an extension
