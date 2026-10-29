@@ -80,7 +80,7 @@ function CaseStudiesIndex() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <main className="pt-32 pb-24 md:pt-40">
+      <main id="main" className="pt-32 pb-24 md:pt-40">
         <div className="mx-auto fluid-container">
           {/* Back to Home Button */}
           <div className="mb-6 flex items-center justify-start">
@@ -108,14 +108,19 @@ function CaseStudiesIndex() {
                   className="glass-panel group block h-full overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[var(--shadow-glow)]"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={c.image}
-                      alt={`${c.name} — ${c.category} case study by Pragiso Soft Technologies`}
-                      width={1024}
-                      height={768}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                    <picture>
+                      {c.imageAvif && <source srcSet={c.imageAvif} type="image/avif" />}
+                      {c.imageWebp && <source srcSet={c.imageWebp} type="image/webp" />}
+                      <img
+                        src={c.image}
+                        alt={`${c.name} — ${c.category} case study by Pragiso Soft Technologies`}
+                        width={1024}
+                        height={768}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </picture>
                     <div
                       aria-hidden
                       className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-90"

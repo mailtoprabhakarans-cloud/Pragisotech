@@ -4,13 +4,15 @@ import logo from "@/assets/pragiso-mark.png.asset.json";
 import { PragisoBrandBadge } from "./PragisoBrandLogo";
 
 const quickLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/" },
   { label: "Products (Pragiso CRM)", href: "/products" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/#services" },
+  { label: "Portfolio", href: "/#portfolio" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
 ];
 
 const products = [
@@ -22,10 +24,10 @@ const products = [
 const services = ["Web Development", "App Development", "Digital Marketing", "UI/UX Design"];
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/pragiso-soft-technologies/?viewAsMember=true" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/pragiso-soft-technologies/" },
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/pragisotech/" },
-  { icon: Facebook, label: "Facebook", href: "#contact" },
-  { icon: Youtube, label: "YouTube", href: "#contact" },
+  { icon: Facebook, label: "Facebook", href: "/contact" },
+  { icon: Youtube, label: "YouTube", href: "/contact" },
 ];
 
 const logoSrc = typeof logo === "string" ? logo : logo?.url || "/favicon.png";
@@ -139,13 +141,13 @@ export function Footer() {
             </h3>
             <ul className="mt-5 space-y-3 text-sm sm:text-base 3xl:text-lg text-muted-foreground">
               <li>
-                <a href="mailto:contact@pragisotech.in" className="hover:text-accent transition-colors">
-                  contact@pragisotech.in
+                <a href="tel:+919080961649" className="hover:text-accent transition-colors font-medium">
+                  +91-90809-61649
                 </a>
               </li>
               <li>
-                <a href="mailto:info@pragisotech.in" className="hover:text-accent transition-colors">
-                  info@pragisotech.in
+                <a href="mailto:contact@pragisotech.in" className="hover:text-accent transition-colors">
+                  contact@pragisotech.in
                 </a>
               </li>
               <li>
@@ -153,14 +155,19 @@ export function Footer() {
                   www.pragisotech.in
                 </a>
               </li>
-              <li>Coimbatore, India</li>
+              <li>Coimbatore, Tamil Nadu, India</li>
             </ul>
           </div>
         </div>
 
-        <p className="mt-14 border-t border-border pt-7 text-center text-xs sm:text-sm 3xl:text-base text-muted-foreground">
-          © 2026 Pragiso Soft Technologies (PragisoTech • www.pragisotech.in). All Rights Reserved.
-        </p>
+        <div className="mt-14 border-t border-border pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-muted-foreground">
+          <p>© 2026 Pragiso Soft Technologies (PragisoTech • www.pragisotech.in). All Rights Reserved.</p>
+          <div className="flex items-center gap-4 text-xs">
+            <Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <span aria-hidden="true">•</span>
+            <Link to="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

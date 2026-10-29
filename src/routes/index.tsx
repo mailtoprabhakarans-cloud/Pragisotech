@@ -24,11 +24,6 @@ export const Route = createFileRoute("/")({
     meta: [
       { title },
       { name: "description", content: description },
-      {
-        name: "keywords",
-        content:
-          "pragisotech, pragisotech.in, pragiso tech, www.pragisotech.in, best IT company in Coimbatore, best software development company Coimbatore, best web development company Coimbatore, best app development company Coimbatore, best digital marketing agency Coimbatore, best UI UX design company Coimbatore, best SEO company Coimbatore, top software company Coimbatore, best portfolio website design, website design Coimbatore, mobile app development Coimbatore, ecommerce website development Coimbatore, custom software development Coimbatore, React development India, Flutter app development India, affordable web development Coimbatore, best startup IT company Tamil Nadu, IT company near me, software development near me Coimbatore, best support IT company Coimbatore, top 10 IT companies in Coimbatore, web application development Coimbatore, best digital agency in India, best web design company Tamil Nadu, Pragiso Soft Technologies, PragisoTech",
-      },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
@@ -66,8 +61,8 @@ export const Route = createFileRoute("/")({
               description:
                 "Best IT company in Coimbatore offering expert web development, mobile app development, UI/UX design, SEO and digital marketing services by PragisoTech (pragisotech.in). We build world-class digital products for startups, SMBs and enterprises across India.",
               slogan: "Innovate • Build • Grow",
-              email: ["contact@pragisotech.in", "info@pragisotech.in"],
-              telephone: "+919080961649",
+              email: "contact@pragisotech.in",
+              telephone: "+91-90809-61649",
               priceRange: "$$",
               currenciesAccepted: "INR",
               paymentAccepted: "Cash, UPI, Bank Transfer, Online Payment",
@@ -95,9 +90,10 @@ export const Route = createFileRoute("/")({
               },
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "[TODO: Add street address]",
                 addressLocality: "Coimbatore",
                 addressRegion: "Tamil Nadu",
-                postalCode: "641001",
+                postalCode: "[TODO: Add postal code, e.g. 641001]",
                 addressCountry: "IN",
               },
               geo: {
@@ -128,14 +124,7 @@ export const Route = createFileRoute("/")({
                 "Cloud Architecture",
                 "API Development",
               ],
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.9",
-                bestRating: "5",
-                worstRating: "1",
-                ratingCount: "47",
-                reviewCount: "32",
-              },
+              // [TODO: Add aggregateRating once visible Google/Clutch verified customer reviews are published on the page]
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Digital Services by Pragiso Soft Technologies — Coimbatore",
@@ -372,7 +361,7 @@ function Index() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <main>
+      <main id="main">
         <Hero />
         <About />
         <Services />

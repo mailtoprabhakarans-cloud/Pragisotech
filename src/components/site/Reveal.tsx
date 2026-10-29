@@ -31,12 +31,23 @@ export function SectionHeading({
   title,
   subtitle,
   align = "center",
+  id,
 }: {
   eyebrow?: string;
   title: string;
   subtitle?: string;
   align?: "center" | "left";
+  id?: string;
 }) {
+  const autoId =
+    id ||
+    (typeof title === "string"
+      ? title
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "")
+      : undefined);
+
   return (
     <Reveal
       className={cn(
@@ -49,7 +60,10 @@ export function SectionHeading({
           {eyebrow}
         </span>
       ) : null}
-      <h2 className="mt-5 text-3xl font-bold text-balance sm:text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl">
+      <h2
+        id={autoId}
+        className="mt-5 text-3xl font-bold text-balance sm:text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl"
+      >
         {title}
       </h2>
       {subtitle ? (

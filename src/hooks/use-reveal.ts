@@ -24,10 +24,17 @@ export function useInView<T extends HTMLElement = HTMLDivElement>(threshold = 0.
 }
 
 export function useCountUp(target: number, start: boolean, duration = 1600) {
-  const [value, setValue] = useState(0);
+  // Initialize with target so raw server-rendered HTML contains the real final number for SEO/AEO/GEO crawlers
+  const [value, setValue] = useState(target);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    if (!start) return;
+    setIsClient(true);
+    setValue(0);
+  }, []);
+
+  useEffect(() => {
+    if (!start || !isClient) return;
     let frame = 0;
     const t0 = performance.now();
     const tick = (now: number) => {
@@ -38,7 +45,7 @@ export function useCountUp(target: number, start: boolean, duration = 1600) {
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [target, start, duration]);
+  }, [target, start, duration, isClient]);
 
   return value;
 }

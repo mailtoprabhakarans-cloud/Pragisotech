@@ -329,11 +329,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Top IT company in Coimbatore offering web & mobile app development, UI/UX design, and digital marketing. Partner with Pragiso for scalable digital solutions.",
       },
-      {
-        name: "keywords",
-        content:
-          "pragisotech, pragisotech.in, pragiso tech, www.pragisotech.in, contact@pragisotech.in, info@pragisotech.in, best IT company in Coimbatore, best software development company Coimbatore, top web development company Coimbatore, best app development company Coimbatore, best digital marketing agency Coimbatore, best UI UX design company Coimbatore, best SEO company Coimbatore, software company in Tamil Nadu, website design Coimbatore, mobile app development Coimbatore, React development company India, Flutter app development India, ecommerce website development Coimbatore, custom software development India, best web design company Coimbatore, affordable web development Coimbatore, startup IT solutions Coimbatore, best portfolio website design, top software company India, Pragiso Soft Technologies, PragisoTech",
-      },
       { name: "geo.region", content: "IN-TN" },
       { name: "geo.placename", content: "Coimbatore" },
       { name: "geo.position", content: "11.0168;76.9558" },
@@ -390,6 +385,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "shortcut icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", href: "/favicon.png", sizes: "180x180" },
       { rel: "manifest", href: "/site.webmanifest" },
+      { rel: "sitemap", type: "application/xml", href: "https://www.pragisotech.in/sitemap.xml" },
     ],
   }),
 
@@ -407,6 +403,12 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-primary-foreground focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-accent"
+        >
+          Skip to main content
+        </a>
         {children}
         <Scripts />
       </body>

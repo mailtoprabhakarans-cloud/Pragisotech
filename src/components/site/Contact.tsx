@@ -28,15 +28,15 @@ const details = [
     value: "info@pragisotech.in",
     href: "mailto:info@pragisotech.in",
   },
-  { icon: Phone, label: "Phone", value: "+91 90809 61649", href: "tel:+919080961649" },
-  { icon: MapPin, label: "Location", value: "Coimbatore, India", href: undefined },
+  { icon: Phone, label: "Phone", value: "+91-90809-61649", href: "tel:+919080961649" },
+  { icon: MapPin, label: "Location", value: "Coimbatore, Tamil Nadu, India", href: undefined },
 ];
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/pragiso-soft-technologies/?viewAsMember=true" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/pragiso-soft-technologies/" },
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/pragisotech/" },
-  { icon: Facebook, label: "Facebook", href: "#contact" },
-  { icon: Youtube, label: "YouTube", href: "#contact" },
+  { icon: Facebook, label: "Facebook", href: "/contact" },
+  { icon: Youtube, label: "YouTube", href: "/contact" },
 ];
 
 export function Contact() {
@@ -121,7 +121,9 @@ export function Contact() {
                   <Input
                     id="name"
                     name="name"
+                    type="text"
                     required
+                    autoComplete="name"
                     placeholder="Your full name"
                     className="3xl:py-3 3xl:text-base"
                   />
@@ -135,6 +137,7 @@ export function Contact() {
                     name="email"
                     type="email"
                     required
+                    autoComplete="email"
                     placeholder="you@company.com"
                     className="3xl:py-3 3xl:text-base"
                   />
@@ -147,7 +150,8 @@ export function Contact() {
                     id="phone"
                     name="phone"
                     type="tel"
-                    placeholder="+91 90809 61649"
+                    autoComplete="tel"
+                    placeholder="+91-90809-61649"
                     className="3xl:py-3 3xl:text-base"
                   />
                 </div>
@@ -158,6 +162,8 @@ export function Contact() {
                   <Input
                     id="company"
                     name="company"
+                    type="text"
+                    autoComplete="organization"
                     placeholder="Company name"
                     className="3xl:py-3 3xl:text-base"
                   />

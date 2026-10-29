@@ -65,19 +65,26 @@ export function CrmHero({ onOpenDemoModal }: { onOpenDemoModal?: () => void }) {
             <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[10px] text-cyan">Enterprise Edition</span>
           </div>
 
-          {/* Main Title */}
-          <h1 className="mt-6 max-w-4xl font-display text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Run Your Field Operations{" "}
+          {/* Main H1 Title (SEO / AEO / GEO optimized) */}
+          <h1
+            id="hero-heading"
+            className="mt-6 max-w-5xl font-display text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-foreground"
+          >
+            Field Service Management Software with{" "}
             <span className="text-gradient underline decoration-accent/40 decoration-wavy decoration-2 underline-offset-8">
-              Smarter
+              Live GPS Tracking
             </span>
           </h1>
 
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
-            Pragiso CRM is an enterprise, cloud-based Field Service platform connecting{" "}
-            <span className="text-foreground font-semibold">dispatchers</span>,{" "}
-            <span className="text-foreground font-semibold">field engineers</span>, and{" "}
-            <span className="text-foreground font-semibold">corporate clients</span> in real time — eliminating paper slips, guesswork, and lost revenue through GPS-powered automation.
+          {/* Sub-headline preserved */}
+          <p className="mt-4 text-xl font-bold tracking-tight text-foreground sm:text-2xl md:text-3xl">
+            Run Your Field Operations{" "}
+            <span className="text-gradient">Smarter</span>
+          </p>
+
+          {/* X is a... definition sentence */}
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
+            <strong className="text-foreground font-semibold">Pragiso CRM is field service management software</strong> with live GPS tracking, geofenced attendance, a mobile PWA, and instant PDF call slips connecting dispatchers, field engineers, and corporate clients in real time — eliminating paper slips, guesswork, and lost revenue.
           </p>
 
           {/* CTAs */}

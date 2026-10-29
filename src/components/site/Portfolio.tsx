@@ -50,14 +50,19 @@ export function Portfolio() {
                 className="card-shine glass-panel group block h-full overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-glow)]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={`${p.name} — ${p.category} project by Pragiso Soft Technologies`}
-                    width={1024}
-                    height={768}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                  />
+                  <picture>
+                    {p.imageAvif && <source srcSet={p.imageAvif} type="image/avif" />}
+                    {p.imageWebp && <source srcSet={p.imageWebp} type="image/webp" />}
+                    <img
+                      src={p.image}
+                      alt={`${p.name} — ${p.category} project by Pragiso Soft Technologies`}
+                      width={1024}
+                      height={768}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                  </picture>
                   <div
                     aria-hidden
                     className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-70"

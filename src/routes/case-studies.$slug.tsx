@@ -136,7 +136,7 @@ function CaseStudyDetail() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <main>
+      <main id="main">
         <section className="relative isolate overflow-hidden pt-32 pb-16 md:pt-40">
           <div
             aria-hidden
@@ -185,13 +185,18 @@ function CaseStudyDetail() {
               </div>
               <div className="reveal" data-visible="true">
                 <div className="glass-panel overflow-hidden rounded-[2rem] p-3 shadow-[var(--shadow-glow)]">
-                  <img
-                    src={study.image}
-                    alt={`${study.name} project interface by Pragiso Soft Technologies`}
-                    width={1024}
-                    height={768}
-                    className="w-full rounded-[1.5rem] object-cover h-[320px] sm:h-[400px] lg:h-[480px] 2xl:h-[560px]"
-                  />
+                  <picture>
+                    {study.imageAvif && <source srcSet={study.imageAvif} type="image/avif" />}
+                    {study.imageWebp && <source srcSet={study.imageWebp} type="image/webp" />}
+                    <img
+                      src={study.image}
+                      alt={`${study.name} project interface by Pragiso Soft Technologies`}
+                      width={1024}
+                      height={768}
+                      decoding="async"
+                      className="w-full rounded-[1.5rem] object-cover h-[320px] sm:h-[400px] lg:h-[480px] 2xl:h-[560px]"
+                    />
+                  </picture>
                 </div>
               </div>
             </div>
@@ -327,14 +332,19 @@ function CaseStudyDetail() {
                       params={{ slug: o.slug }}
                       className="glass-panel group block h-full overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1.5"
                     >
-                      <img
-                        src={o.image}
-                        alt={`${o.name} case study preview`}
-                        width={640}
-                        height={480}
-                        loading="lazy"
-                        className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
+                      <picture>
+                        {o.imageAvif && <source srcSet={o.imageAvif} type="image/avif" />}
+                        {o.imageWebp && <source srcSet={o.imageWebp} type="image/webp" />}
+                        <img
+                          src={o.image}
+                          alt={`${o.name} case study preview`}
+                          width={640}
+                          height={480}
+                          loading="lazy"
+                          decoding="async"
+                          className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      </picture>
                       <div className="p-5">
                         <p className="text-xs text-accent">{o.category}</p>
                         <h3 className="mt-1.5 text-base font-semibold">{o.name}</h3>

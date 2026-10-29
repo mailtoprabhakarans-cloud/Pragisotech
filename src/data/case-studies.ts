@@ -1,8 +1,22 @@
 import ecommerce from "@/assets/work-ecommerce.jpg";
+import ecommerceWebp from "@/assets/work-ecommerce.webp";
+import ecommerceAvif from "@/assets/work-ecommerce.avif";
+
 import app from "@/assets/work-app.jpg";
+import appWebp from "@/assets/work-app.webp";
+import appAvif from "@/assets/work-app.avif";
+
 import corporate from "@/assets/work-corporate.jpg";
+import corporateWebp from "@/assets/work-corporate.webp";
+import corporateAvif from "@/assets/work-corporate.avif";
+
 import marketing from "@/assets/work-marketing.jpg";
+import marketingWebp from "@/assets/work-marketing.webp";
+import marketingAvif from "@/assets/work-marketing.avif";
+
 import fintech from "@/assets/work-fintech.jpg";
+import fintechWebp from "@/assets/work-fintech.webp";
+import fintechAvif from "@/assets/work-fintech.avif";
 
 export type CaseStudy = {
   slug: string;
@@ -12,6 +26,8 @@ export type CaseStudy = {
   tags: string[];
   desc: string;
   image: string;
+  imageWebp?: string;
+  imageAvif?: string;
   client: string;
   industry: string;
   timeline: string;
@@ -34,6 +50,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["React", "Node.js", "Stripe"],
     desc: "A high-performance storefront with real-time inventory and a checkout tuned for conversion.",
     image: ecommerce,
+    imageWebp: ecommerceWebp,
+    imageAvif: ecommerceAvif,
     client: "Multi-brand retail group",
     industry: "Retail & Commerce",
     timeline: "14 weeks",
@@ -86,6 +104,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["Flutter", "Firebase", "REST"],
     desc: "A cross-platform operations app that keeps teams, tasks and reporting in one place.",
     image: app,
+    imageWebp: appWebp,
+    imageAvif: appAvif,
     client: "Field services company",
     industry: "Operations & Field Services",
     timeline: "18 weeks",
@@ -138,6 +158,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["Next.js", "Figma", "CMS"],
     desc: "A refreshed corporate presence with a scalable design system and editorial CMS.",
     image: corporate,
+    imageWebp: corporateWebp,
+    imageAvif: corporateAvif,
     client: "B2B manufacturing group",
     industry: "Manufacturing",
     timeline: "10 weeks",
@@ -190,6 +212,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["SEO", "Google Ads", "Meta Ads"],
     desc: "A full-funnel acquisition program that lifted qualified leads quarter over quarter.",
     image: marketing,
+    imageWebp: marketingWebp,
+    imageAvif: marketingAvif,
     client: "Education technology brand",
     industry: "EdTech",
     timeline: "6 months",
@@ -241,6 +265,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["TypeScript", "React", "Design System"],
     desc: "A dense analytics dashboard made readable through clear hierarchy and live data views.",
     image: fintech,
+    imageWebp: fintechWebp,
+    imageAvif: fintechAvif,
     client: "Payments platform",
     industry: "Financial Services",
     timeline: "16 weeks",

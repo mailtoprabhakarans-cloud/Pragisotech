@@ -22,18 +22,18 @@ export function CrmPartnership() {
             {/* Direct Contact Points */}
             <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-medium">
               <a
-                href="mailto:info@pragisotech.in"
+                href="mailto:contact@pragisotech.in"
                 className="flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-2 text-foreground hover:border-accent/40 hover:text-accent transition-colors"
               >
                 <Mail className="size-4 text-cyan" />
-                info@pragisotech.in
+                contact@pragisotech.in
               </a>
               <a
-                href="tel:+917904588377"
+                href="tel:+919080961649"
                 className="flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-2 text-foreground hover:border-accent/40 hover:text-accent transition-colors"
               >
                 <Phone className="size-4 text-teal" />
-                +91 7904588377
+                +91-90809-61649
               </a>
               <a
                 href="https://www.pragisotech.in"

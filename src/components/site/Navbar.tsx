@@ -7,16 +7,16 @@ import logo from "@/assets/pragiso-mark.png.asset.json";
 import { PragisoBrandBadge } from "./PragisoBrandLogo";
 
 const links = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/" },
   { label: "Products", href: "/products", badge: "CRM" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/#services" },
+  { label: "Portfolio", href: "/#portfolio" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Process", href: "#process" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Process", href: "/#process" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const logoSrc = typeof logo === "string" ? logo : logo?.url || "/favicon.png";
@@ -85,7 +85,7 @@ export function Navbar() {
             className="btn-magnetic hidden rounded-full sm:inline-flex 3xl:text-base 3xl:px-6 3xl:py-3"
             asChild
           >
-            <Link to="/" hash="contact">Let's Talk</Link>
+            <Link to="/contact">Let's Talk</Link>
           </Button>
           <Button
             variant="glass"

@@ -260,7 +260,7 @@ Requested via Website 7-Day Demo Form.`;
                 </div>
               </div>
               <a
-                href="https://wa.me/917904588377?text=Hi%20Pragiso%20Team%2C%20I%20want%20to%20start%20the%207-day%20demo%20of%20Pragiso%20CRM%20for%20my%20company."
+                href="https://wa.me/919080961649?text=Hi%20Pragiso%20Team%2C%20I%20want%20to%20start%20the%207-day%20demo%20of%20Pragiso%20CRM%20for%20my%20company."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whitespace-nowrap rounded-full bg-emerald-600 px-5 py-2.5 text-xs font-bold text-white hover:bg-emerald-500 transition-colors"
@@ -314,7 +314,9 @@ Requested via Website 7-Day Demo Form.`;
                     <Input
                       id="demo-name"
                       name="name"
+                      type="text"
                       required
+                      autoComplete="name"
                       placeholder="e.g. Rajesh Kumar"
                       className="mt-1.5 text-xs bg-secondary/50 border-border"
                     />
@@ -330,6 +332,7 @@ Requested via Website 7-Day Demo Form.`;
                         name="email"
                         type="email"
                         required
+                        autoComplete="email"
                         placeholder="rajesh@company.com"
                         className="mt-1.5 text-xs bg-secondary/50 border-border"
                       />
@@ -343,7 +346,8 @@ Requested via Website 7-Day Demo Form.`;
                         name="phone"
                         type="tel"
                         required
-                        placeholder="+91 98765 43210"
+                        autoComplete="tel"
+                        placeholder="+91-90809-61649"
                         className="mt-1.5 text-xs bg-secondary/50 border-border"
                       />
                     </div>
@@ -356,6 +360,8 @@ Requested via Website 7-Day Demo Form.`;
                     <Input
                       id="demo-company"
                       name="company"
+                      type="text"
+                      autoComplete="organization"
                       placeholder="e.g. Apex Engineering Services"
                       className="mt-1.5 text-xs bg-secondary/50 border-border"
                     />
@@ -363,11 +369,11 @@ Requested via Website 7-Day Demo Form.`;
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                      <Label className="text-xs text-foreground font-semibold">
+                      <Label htmlFor="demo-team-size" className="text-xs text-foreground font-semibold">
                         Field Team Size
                       </Label>
                       <Select value={teamSize} onValueChange={setTeamSize}>
-                        <SelectTrigger className="mt-1.5 text-xs bg-secondary/50 border-border">
+                        <SelectTrigger id="demo-team-size" className="mt-1.5 text-xs bg-secondary/50 border-border">
                           <SelectValue placeholder="Select team size" />
                         </SelectTrigger>
                         <SelectContent>
@@ -380,11 +386,11 @@ Requested via Website 7-Day Demo Form.`;
                     </div>
 
                     <div>
-                      <Label className="text-xs text-foreground font-semibold">
+                      <Label htmlFor="demo-industry" className="text-xs text-foreground font-semibold">
                         Primary Industry
                       </Label>
                       <Select value={industry} onValueChange={setIndustry}>
-                        <SelectTrigger className="mt-1.5 text-xs bg-secondary/50 border-border">
+                        <SelectTrigger id="demo-industry" className="mt-1.5 text-xs bg-secondary/50 border-border">
                           <SelectValue placeholder="Select industry" />
                         </SelectTrigger>
                         <SelectContent>

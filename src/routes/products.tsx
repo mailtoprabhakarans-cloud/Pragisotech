@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { CrmHero } from "@/components/crm/CrmHero";
@@ -10,10 +10,12 @@ import { CrmTechStack } from "@/components/crm/CrmTechStack";
 import { CrmRoleMatrix } from "@/components/crm/CrmRoleMatrix";
 import { CrmSevenDayDemo } from "@/components/crm/CrmSevenDayDemo";
 import { CrmPartnership } from "@/components/crm/CrmPartnership";
+import { CrmFaq } from "@/components/crm/CrmFaq";
+import { crmFaqList } from "@/data/crm-faq";
 
-const title = "Pragiso CRM — Enterprise Field Service Management Platform | 7-Day Free Demo";
+const title = "Pragiso CRM: Field Service Management Software | Free Demo";
 const description =
-  "Pragiso CRM connects dispatchers, field engineers, and corporate clients with live GPS tracking, geofenced attendance, screen-off PWA, instant PDF call slips, and payment audits. Start your 7-day risk-free live demo today.";
+  "Pragiso CRM is field service management software with live GPS tracking, geofenced attendance, and instant PDF call slips. Start a free 7-day demo.";
 
 export const Route = createFileRoute("/products")({
   component: ProductsPage,
@@ -21,11 +23,6 @@ export const Route = createFileRoute("/products")({
     meta: [
       { title },
       { name: "description", content: description },
-      {
-        name: "keywords",
-        content:
-          "Pragiso CRM, Field Service CRM, Field Service Management software, GPS fleet tracking software, engineer dispatch system, geofenced attendance PWA, mobile field service app, OSRM route audit, digital service call slip PDF, CRM Coimbatore, field technician tracking software India, Pragiso Soft Technologies",
-      },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
@@ -33,7 +30,7 @@ export const Route = createFileRoute("/products")({
       { property: "og:image", content: "https://www.pragisotech.in/pragiso-services-hero.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Pragiso CRM — Enterprise Field Service Management" },
+      { property: "og:image:alt", content: "Pragiso CRM — Field Service Management Software" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
@@ -78,23 +75,36 @@ export const Route = createFileRoute("/products")({
               operatingSystem: "Web, Progressive Web App (Android, iOS)",
               description: description,
               url: "https://www.pragisotech.in/products",
+              publisher: {
+                "@type": "Organization",
+                "@id": "https://www.pragisotech.in/#organization",
+                name: "Pragiso Soft Technologies",
+                url: "https://www.pragisotech.in",
+              },
+              datePublished: "2026-08-20",
+              dateModified: "2026-10-29",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "INR",
                 name: "7-Day Risk-Free Live Demo",
-                description: "Full enterprise trial with live GPS fleet dispatch, PWA engineer rollout, and automated conveyance audit for 7 days.",
+                description:
+                  "Full enterprise trial with live GPS fleet dispatch, PWA engineer rollout, and automated conveyance audit for 7 days.",
+                url: "https://www.pragisotech.in/products",
+                availability: "https://schema.org/InStock",
               },
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.9",
-                reviewCount: "48",
-              },
-              creator: {
-                "@type": "Organization",
-                name: "Pragiso Soft Technologies",
-                url: "https://www.pragisotech.in",
-              },
+              // [TODO: Add aggregateRating once verified customer reviews are published visibly on /products]
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: crmFaqList.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
             },
           ],
         }),
@@ -114,7 +124,31 @@ function ProductsPage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background">
       <Navbar />
-      <main>
+      <main id="main">
+        {/* Visible Breadcrumb (Matches BreadcrumbList schema: Home > Products > Pragiso CRM) */}
+        <nav
+          aria-label="Breadcrumb"
+          className="mx-auto max-w-7xl px-5 pt-28 pb-2 lg:px-8 text-xs text-muted-foreground"
+        >
+          <ol className="flex items-center gap-2">
+            <li>
+              <Link to="/" className="hover:text-accent transition-colors">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-border">/</li>
+            <li>
+              <Link to="/products" className="hover:text-accent transition-colors">
+                Products
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-border">/</li>
+            <li className="font-semibold text-foreground" aria-current="page">
+              Pragiso CRM
+            </li>
+          </ol>
+        </nav>
+
         {/* Hero with live control room dispatch mockup and stats */}
         <CrmHero onOpenDemoModal={scrollToDemo} />
 
@@ -139,8 +173,18 @@ function ProductsPage() {
         {/* Role-Based Security Matrix */}
         <CrmRoleMatrix />
 
+        {/* FAQ Section (AEO / GEO optimized with matching FAQPage JSON-LD) */}
+        <CrmFaq />
+
         {/* Partnership & Direct Contact */}
         <CrmPartnership />
+
+        {/* Visible Last Updated indicator */}
+        <footer className="border-t border-border/40 py-8 text-center text-xs text-muted-foreground">
+          <p>
+            Last updated: <time dateTime="2026-10-29">October 29, 2026</time> • Pragiso Soft Technologies • Coimbatore, Tamil Nadu, India
+          </p>
+        </footer>
       </main>
       <Footer />
     </div>

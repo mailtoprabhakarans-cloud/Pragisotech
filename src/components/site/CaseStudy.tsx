@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Reveal, SectionHeading } from "./Reveal";
 import { useCountUp, useInView } from "@/hooks/use-reveal";
 import fintech from "@/assets/work-fintech.jpg";
+import fintechWebp from "@/assets/work-fintech.webp";
+import fintechAvif from "@/assets/work-fintech.avif";
 
 const blocks = [
   {
@@ -55,14 +57,19 @@ export function CaseStudy() {
           <div className="glass-panel overflow-hidden rounded-3xl shadow-[var(--shadow-elegant)]">
             <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
               <div className="relative min-h-64">
-                <img
-                  src={fintech}
-                  alt="Featured Pragiso case study dashboard interface"
-                  width={1024}
-                  height={768}
-                  loading="lazy"
-                  className="h-full w-full object-cover"
-                />
+                <picture>
+                  <source srcSet={fintechAvif} type="image/avif" />
+                  <source srcSet={fintechWebp} type="image/webp" />
+                  <img
+                    src={fintech}
+                    alt="Featured Pragiso case study dashboard interface"
+                    width={1024}
+                    height={768}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
+                </picture>
                 <div
                   aria-hidden
                   className="absolute inset-0 bg-gradient-to-r from-background/60 to-background/20"
