@@ -36,3 +36,4 @@ export const crmFaqList: FaqItem[] = [
       "Pragiso CRM pricing is customized based on your fleet size, technician seat count, and required deployment modules. The initial 7-day live demo is completely free with full feature access and zero financial obligation. Please contact our team for standard commercial subscription plans [TODO: Add official pricing tiers and per-user monthly rates].",
   },
 ];
+
