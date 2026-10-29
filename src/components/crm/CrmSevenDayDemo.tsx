@@ -32,6 +32,7 @@ import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 
 export function CrmSevenDayDemo() {
   const [activeDay, setActiveDay] = useState(0);
+  const currentPlan = crmDemoPlan[activeDay] ?? crmDemoPlan[0]!;
   const [teamSize, setTeamSize] = useState("5-20");
   const [industry, setIndustry] = useState("HVAC & Cooling");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -91,7 +92,7 @@ Requested via Website 7-Day Demo Form.`;
     } catch (err: any) {
       console.error("Failed to submit demo request:", err);
       toast.error("Could not register demo request", {
-        description: err?.message || "Please contact +91 7904588377 directly.",
+        description: err?.message || "Please contact +91-90809-61649 directly.",
       });
     } finally {
       setIsSubmitting(false);
@@ -193,19 +194,19 @@ Requested via Website 7-Day Demo Form.`;
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/60 pb-4">
                 <div>
                   <span className="rounded-full bg-accent/20 px-2.5 py-1 text-xs font-bold text-cyan">
-                    {crmDemoPlan[activeDay].day} Focus
+                    {currentPlan.day} Focus
                   </span>
                   <h4 className="mt-2 text-xl font-bold text-foreground">
-                    {crmDemoPlan[activeDay].title}
+                    {currentPlan.title}
                   </h4>
                 </div>
                 <span className="rounded-full border border-border bg-secondary/80 px-3 py-1 text-xs font-semibold text-accent">
-                  {crmDemoPlan[activeDay].badge}
+                  {currentPlan.badge}
                 </span>
               </div>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                {crmDemoPlan[activeDay].description}
+                {currentPlan.description}
               </p>
 
               <div className="mt-6">
@@ -213,7 +214,7 @@ Requested via Website 7-Day Demo Form.`;
                   Expected Day {activeDay + 1} Deliverables:
                 </p>
                 <ul className="mt-3 space-y-2">
-                  {crmDemoPlan[activeDay].deliverables.map((item) => (
+                  {currentPlan.deliverables.map((item) => (
                     <li key={item} className="flex items-center gap-2.5 text-xs text-muted-foreground">
                       <span className="flex size-4 shrink-0 items-center justify-center rounded-full bg-teal/20 text-teal">
                         <CheckCircle2 className="size-3" />
