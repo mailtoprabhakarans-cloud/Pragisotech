@@ -1,9 +1,10 @@
 import { HelpCircle } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { crmFaqList } from "@/data/crm-faq";
 
 export function CrmFaq() {
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="relative py-20 md:py-28">
+    <section id="faq" aria-labelledby="faq-heading" className="relative py-20 md:py-28 border-t border-border/40">
       {/* Background ambient lighting */}
       <div
         aria-hidden
@@ -25,8 +26,7 @@ export function CrmFaq() {
             id="faq-heading"
             className="mt-6 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-foreground"
           >
-            Frequently Asked Questions About{" "}
-            <span className="text-gradient">Pragiso CRM</span>
+            Frequently asked questions
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
             Direct, verified answers regarding Pragiso CRM field service management software, mobile capabilities, and the 7-day live demo.
@@ -46,7 +46,21 @@ export function CrmFaq() {
                 {faq.question}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                {faq.answer}
+                {faq.contactLink ? (
+                  <>
+                    Pricing depends on team size.{" "}
+                    <Link to="/contact" className="text-accent underline font-semibold hover:text-cyan transition-colors">
+                      Contact us for a quote
+                    </Link>{" "}
+                    [TODO: Add official pricing tiers and per-user monthly rates]. You can start with our complete 7-day free trial that includes guided 20-minute setup, all three role portals, and full enterprise features with zero upfront commitment. Please reach out through our{" "}
+                    <Link to="/contact" className="text-accent underline font-semibold hover:text-cyan transition-colors">
+                      contact page
+                    </Link>{" "}
+                    for commercial subscription pricing.
+                  </>
+                ) : (
+                  faq.answer
+                )}
               </p>
             </article>
           ))}
@@ -55,4 +69,3 @@ export function CrmFaq() {
     </section>
   );
 }
-

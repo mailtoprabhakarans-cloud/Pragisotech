@@ -96,6 +96,11 @@ function TermsPage() {
             Terms of Service
           </h1>
 
+          {/* Legal Draft Notice */}
+          <div className="mt-4 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-xs sm:text-sm text-amber-200">
+            <strong>Notice:</strong> This document is a draft for legal review and customization by Pragiso Soft Technologies before final commercial publication.
+          </div>
+
           <p className="mt-3 text-xs sm:text-sm text-muted-foreground">
             Last modified: <time dateTime="2026-10-29">October 29, 2026</time> • Pragiso Soft Technologies
           </p>

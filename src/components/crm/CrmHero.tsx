@@ -82,9 +82,9 @@ export function CrmHero({ onOpenDemoModal }: { onOpenDemoModal?: () => void }) {
             <span className="text-gradient">Smarter</span>
           </p>
 
-          {/* X is a... definition sentence */}
+          {/* Verbatim definition sentence for AEO / GEO */}
           <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
-            <strong className="text-foreground font-semibold">Pragiso CRM is field service management software</strong> with live GPS tracking, geofenced attendance, a mobile PWA, and instant PDF call slips connecting dispatchers, field engineers, and corporate clients in real time — eliminating paper slips, guesswork, and lost revenue.
+            Pragiso CRM is field service management software that connects dispatchers, field engineers, and corporate clients with live GPS tracking, geofenced attendance, and instant PDF call slips.
           </p>
 
           {/* CTAs */}

@@ -167,26 +167,129 @@ function AboutPage() {
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <div className="glass-panel rounded-2xl p-6 border border-border/80">
                 <Code2 className="size-8 text-cyan" />
-                <h3 className="mt-4 font-display text-lg font-bold text-foreground">Custom Web Applications</h3>
+                <h3 className="mt-4 font-display text-lg font-bold text-foreground">
+                  <Link to="/" hash="services" className="hover:text-accent transition-colors">
+                    Web Application Development
+                  </Link>
+                </h3>
                 <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
                   High-performance web apps built with React, TypeScript, TanStack Start, and modern cloud serverless runtimes.
                 </p>
+                <Link to="/" hash="services" className="mt-3 inline-block text-xs font-semibold text-accent hover:underline">
+                  View web services →
+                </Link>
               </div>
 
               <div className="glass-panel rounded-2xl p-6 border border-border/80">
                 <Cpu className="size-8 text-electric" />
-                <h3 className="mt-4 font-display text-lg font-bold text-foreground">Mobile & PWA Engineering</h3>
+                <h3 className="mt-4 font-display text-lg font-bold text-foreground">
+                  <Link to="/" hash="services" className="hover:text-accent transition-colors">
+                    Mobile App Development
+                  </Link>
+                </h3>
                 <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
                   Progressive Web Apps and cross-platform mobile solutions with offline capabilities and real-time GPS telemetry.
                 </p>
+                <Link to="/" hash="services" className="mt-3 inline-block text-xs font-semibold text-accent hover:underline">
+                  View mobile services →
+                </Link>
               </div>
 
               <div className="glass-panel rounded-2xl p-6 border border-border/80">
                 <Globe2 className="size-8 text-teal" />
-                <h3 className="mt-4 font-display text-lg font-bold text-foreground">Field Service Software</h3>
+                <h3 className="mt-4 font-display text-lg font-bold text-foreground">
+                  <Link to="/products" className="hover:text-accent transition-colors">
+                    Pragiso CRM (Field Service SaaS)
+                  </Link>
+                </h3>
                 <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
                   Specialized SaaS solutions including Pragiso CRM for fleet dispatch, geofenced attendance, and instant PDF call slips.
                 </p>
+                <Link to="/products" className="mt-3 inline-block text-xs font-semibold text-accent hover:underline">
+                  Explore Pragiso CRM →
+                </Link>
+              </div>
+
+              <div className="glass-panel rounded-2xl p-6 border border-border/80">
+                <Sparkles className="size-8 text-pink-400" />
+                <h3 className="mt-4 font-display text-lg font-bold text-foreground">
+                  <Link to="/" hash="services" className="hover:text-accent transition-colors">
+                    UI/UX Design & Branding
+                  </Link>
+                </h3>
+                <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
+                  High-converting user interface design, accessible component design systems, wireframes, and enterprise brand identity.
+                </p>
+                <Link to="/" hash="services" className="mt-3 inline-block text-xs font-semibold text-accent hover:underline">
+                  View design services →
+                </Link>
+              </div>
+
+              <div className="glass-panel rounded-2xl p-6 border border-border/80">
+                <Target className="size-8 text-amber-400" />
+                <h3 className="mt-4 font-display text-lg font-bold text-foreground">
+                  <Link to="/" hash="services" className="hover:text-accent transition-colors">
+                    Digital Marketing & SEO
+                  </Link>
+                </h3>
+                <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
+                  Data-driven SEO, Generative Engine Optimization (GEO), performance advertising campaigns, and lead generation funnels.
+                </p>
+                <Link to="/" hash="services" className="mt-3 inline-block text-xs font-semibold text-accent hover:underline">
+                  View marketing services →
+                </Link>
+              </div>
+
+              <div className="glass-panel rounded-2xl p-6 border border-border/80">
+                <ShieldCheck className="size-8 text-emerald-400" />
+                <h3 className="mt-4 font-display text-lg font-bold text-foreground">
+                  <Link to="/contact" className="hover:text-accent transition-colors">
+                    Custom Cloud & Consulting
+                  </Link>
+                </h3>
+                <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
+                  Scalable cloud infrastructure design, API integrations, database optimization, and dedicated software maintenance.
+                </p>
+                <Link to="/contact" className="mt-3 inline-block text-xs font-semibold text-accent hover:underline">
+                  Discuss a project →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Company Background & Leadership */}
+        <section className="py-16 border-t border-border/60 bg-secondary/10">
+          <div className="mx-auto max-w-7xl px-5 lg:px-8">
+            <div className="grid gap-8 md:grid-cols-2">
+              <div className="glass-panel rounded-3xl p-8 border border-border/80">
+                <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-primary/20 text-accent">
+                  <Building2 className="size-6" />
+                </div>
+                <h2 className="mt-6 font-display text-2xl font-bold text-foreground">Company History</h2>
+                <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    <strong className="text-foreground">Founded:</strong> [TODO: Add official founding year, e.g. 2024] in Coimbatore, Tamil Nadu, India.
+                  </p>
+                  <p>
+                    Pragiso Soft Technologies was established to deliver end-to-end digital solutions for growing enterprises, combining modern web applications, mobile development, UI/UX design, digital marketing, and proprietary SaaS platforms like Pragiso CRM.
+                  </p>
+                </div>
+              </div>
+
+              <div className="glass-panel rounded-3xl p-8 border border-border/80">
+                <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-cyan/10 text-cyan">
+                  <Users className="size-6" />
+                </div>
+                <h2 className="mt-6 font-display text-2xl font-bold text-foreground">Leadership & Team</h2>
+                <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    <strong className="text-foreground">Founders & Leadership:</strong> [TODO: Add founder name(s), executive roles, and key leadership team members].
+                  </p>
+                  <p>
+                    Our multidisciplinary engineering and design team builds production systems focused on performance, accessibility, search authority, and clean UX workflows.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -239,6 +342,13 @@ function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Visible Last Updated indicator */}
+        <footer className="border-t border-border/40 py-8 text-center text-xs text-muted-foreground">
+          <p>
+            Last updated: <time dateTime="2026-10-29">October 29, 2026</time> • Pragiso Soft Technologies • Coimbatore, Tamil Nadu, India
+          </p>
+        </footer>
       </main>
       <Footer />
     </div>

@@ -10,6 +10,7 @@ import { CrmTechStack } from "@/components/crm/CrmTechStack";
 import { CrmRoleMatrix } from "@/components/crm/CrmRoleMatrix";
 import { CrmSevenDayDemo } from "@/components/crm/CrmSevenDayDemo";
 import { CrmPartnership } from "@/components/crm/CrmPartnership";
+import { CrmHowToCallSlips } from "@/components/crm/CrmHowToCallSlips";
 import { CrmFaq } from "@/components/crm/CrmFaq";
 import { crmFaqList } from "@/data/crm-faq";
 
@@ -172,6 +173,9 @@ function ProductsPage() {
 
         {/* Role-Based Security Matrix */}
         <CrmRoleMatrix />
+
+        {/* How-to: Replace paper service slips with digital call slips (5 steps) */}
+        <CrmHowToCallSlips />
 
         {/* FAQ Section (AEO / GEO optimized with matching FAQPage JSON-LD) */}
         <CrmFaq />

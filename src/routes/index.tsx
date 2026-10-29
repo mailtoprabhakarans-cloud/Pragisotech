@@ -67,12 +67,7 @@ export const Route = createFileRoute("/")({
               currenciesAccepted: "INR",
               paymentAccepted: "Cash, UPI, Bank Transfer, Online Payment",
               openingHours: "Mo-Sa 09:00-18:00",
-              foundingDate: "2024",
-              numberOfEmployees: {
-                "@type": "QuantitativeValue",
-                minValue: 2,
-                maxValue: 10,
-              },
+              // [TODO: Add verified foundingDate, e.g. "2024"]
               areaServed: [
                 { "@type": "City", name: "Coimbatore" },
                 { "@type": "State", name: "Tamil Nadu" },
@@ -104,6 +99,8 @@ export const Route = createFileRoute("/")({
               sameAs: [
                 "https://www.linkedin.com/company/pragiso-soft-technologies/",
                 "https://www.instagram.com/pragisotech/",
+                // [TODO: Add verified X (Twitter) URL if active, e.g. https://x.com/pragisotech]
+                // [TODO: Add verified Google Business Profile link]
               ],
               knowsAbout: [
                 "Web Development",
